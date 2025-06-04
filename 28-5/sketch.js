@@ -39,7 +39,13 @@ function draw() {
   }
 
   amp = mic.getLevel();
-  calibrar();
+  //calibrar();
+  console.log("Calibración completada: " + ampMin + " - " + ampMax);
+  push();
+  textSize(50);
+  fill(255);
+  text("AMPLITUD: " + nfc(amp, 4), margen, margen);
+  pop();
 }
 
 function keyPressed() {
